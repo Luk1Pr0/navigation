@@ -6,6 +6,22 @@ const nav3 = document.getElementById("nav-3");
 const nav4 = document.getElementById("nav-4");
 const nav5 = document.getElementById("nav-5");
 
+function toggleNav() {
+    // Toggle open/close menu bars
+    menuBars.classList.toggle("change");
+    // Toggle: Menu active/inactive
+    overlay.classList.toggle("overlay-active");
+    if (overlay.classList.contains("overlay-active")) {
+        // Animate overlay slide in right
+        overlay.classList.remove("overlay-slide-left");
+        overlay.classList.add("overlay-slide-right");
+    } else {
+        // Animate overlay slide out left
+        overlay.classList.remove("overlay-slide-right");
+        overlay.classList.add("overlay-slide-left");
+    }
+}
+
 // Event listeners
 menuBars.addEventListener("click", toggleNav);
 nav1.addEventListener("click", toggleNav);
