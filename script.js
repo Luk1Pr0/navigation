@@ -38,4 +38,4 @@ function toggleNav() {
 menuBars.addEventListener("click", toggleNav);
 navItems.forEach((nav) => {
     nav.addEventListener("click", toggleNav);
-})
+});
